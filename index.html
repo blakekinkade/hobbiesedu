@@ -499,6 +499,8 @@ Error message and password prompt
 
 <li>Half Adder/Full Adder</li>
 
+<li>Half Adder/Full Adder 1</li>
+
 <li>Journal</li>
 
 <li>LocationCreated</li>
@@ -14685,7 +14687,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210525030211452" list="[[Half Adder/Full Adder]] [[Private/Public Keys (SSH)]]" modified="20210525030530438" title="$:/StoryList">
+<div created="20210525030211452" list="[[Half Adder/Full Adder 1]] [[Half Adder/Full Adder]] [[Private/Public Keys (SSH)]]" modified="20210525030530438" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210423181717853" modified="20210423181717853" title="$:/theme">
@@ -15799,6 +15801,34 @@ To view the current tiddler's fields in the Info tab,
 <pre>A half adder is meant to take two bits of input and then output the sum of those two bits. So, 00-&gt;0, 01-&gt;1, etc. That goes to the output bit. The carry bit is used to output overflow; for a half adder, it will only be true in the case of 11, since 1+1 is 10. In order to create the necessary circuit, you just need to create a truth table and use that to calculate a proper combination of gates to generate each output. In your truth table, if you arrange your outputs as (Carry|Out), then your output will look exactly like the sum of the bits.
 
 A full adder takes three bits of input, typically two bits from the addends and the carry out of the next least significant addends, and adds them together. Again, you just need to create a truth table and determine the proper gates for each output in terms of the three inputs.</pre>
+</div>
+<div created="20210525032159532" id="E-20200118-Cortland5102" modified="20210525032310111" source-section="learnprogramming" source-title="reddit" tags="" title="Half Adder/Full Adder 1" url="https://www.reddit.com/r/learnprogramming/comments/mw9oe/half_adder_and_full_adder_circuits/c34ewtf?utm_source=share&amp;utm_medium=web2x&amp;context=3" wiki="Tech">
+<pre>Here's a YouTube link to a wooden Marble Adding Machine. It helps to visually see how adders work together to add binary inputs.
+A half adder takes two binary inputs -- A and B -- and generates two outputs -- the sum, S, and the carry, C_out. With two inputs, there are four possible outputs:
+Inputs |   Outputs
+-------------------
+A + B  =  S , C_out
+-------------------
+0   0  |  0     0
+0   1  |  1     0
+1   0  |  1     0
+1   1  |  0     1
+-------------------
+A full adder takes three inputs -- A and B of the half adder and a third carry input, C_in -- and generates three outputs -- the sum, S, and the carry, C_out. With three inputs, there are eight possible outputs:
+Inputs       |   Outputs
+--------------------------
+A + B + C_in =  S , C_out
+--------------------------
+0   0     0  |  0     0
+0   1     0  |  1     0
+1   0     0  |  1     0
+1   1     0  |  0     1
+0   0     1  |  1     0
+0   1     1  |  0     1
+1   0     1  |  0     1
+1   1     1  |  1     1
+--------------------------
+These adders can be linked together by connecting the C_out of one to the C_in of another.</pre>
 </div>
 <div created="20210502054120133" modified="20210502054130331" tags="Dashboard" title="Journal">
 <pre></pre>
